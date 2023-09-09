@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Registration</title>
+
+
+	
+		<!--Google Font-->
+		<link 
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&dispaly=swap"
+			rel="stylesheet"
+		/>
+
+		<!--Stylesheet-->
+		<link rel="stylesheet" href="Registration.css"/>
+			<script>
+			function validateForm() {
+			  let usrname = document.forms["myForm"]["S_name"].value;
+			  let pass = document.forms["myForm"]["password1"].value;
+			  if (usrname == "")  {
+				alert("Name must be filled out");
+				return false;
+			  }
+			  if (pass == "")  {
+				alert("Password must be filled out");
+				return false;
+			  }
+			}
+			</script>
+</head>
+
+<body>
+	<div class="container_reg">
+	<h1>Welcome to Registration</h1>
+	<p >Pleace Create your account </p>
+	<form name="myForm" action="HomePage.html" onsubmit="return validateForm()" method="post">
+	<input type="text" 		placeholder="Enter Your Name" 			id="S_name" name="S_name"/>
+	<input type="text" 		placeholder="Enter Your ID" 			id="S_ID" name="S_ID"/>
+	<input type="text" 		placeholder="Enter Your Email" 			id="S_email" name="S_email"/>
+	<input type="number" 	placeholder="Enter Your Age" 			id="S_age" name="S_age"/>
+	<input type="number" 	placeholder="Enter Your Class Grade" 	id="S_grade" name="S_grade"/>
+	<input type="number" 	placeholder="Enter Your Phone Number" 	id="Phone" name="Phone"/>
+	<input type="Password" 	placeholder="Enter Your Password" 		id="password1" name="password1"/>
+	<input type="Password" 	placeholder="Confirm Password" 			id="password2" name="password2"/>
+	
+	<button type="submit" value="Submit" id="submit_reg">Submit</button>
+	</form>
+	
+	
+	<!-- <a href="HomePage.html">
+	<button id="submit_reg">Submit</button></a>
+	-->
+	<a href="start_page.html">
+	<button id="back_reg">Go Back</button></a>
+	</div>
+
+</body>
+
+</html>
+<?php
+if(isset($_POST['submit_reg'])){
+	if(!empty($_POST['S_name']&&
+	   !empty($_POST['S_ID']&& 	
+	   !empty($_POST['S_email']&& 
+	   !empty($_POST['S_age']&&
+       !empty($_POST['S_grade']&&
+	   !empty($_POST['Phone']&&
+	   !empty($_POST['password1']&&
+	   !empty($_POST['password2']))))))))){ 
+			// Receive data
+		
+		$name=$_POST['S_name'];
+		$S_ID=$_POST['S_ID'];
+		$S_email=$_POST['S_email'];
+		$S_age=$_POST['S_age'];
+		$S_grade=$_POST['S_grade'];
+		$Phone=$_POST['Phone'];
+		$password1=$_POST['password1'];
+		$password2=$_POST['password2'];
+		
+?>

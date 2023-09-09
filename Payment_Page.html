@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Payment</title>
+<!--Google Font-->
+		<link 
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&dispaly=swap"
+			rel="stylesheet"
+		/>
+		<!--Stylesheet-->
+		<link rel="stylesheet" href="Payment.css"/>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row">
+
+            <h2>Billing information</h2>
+			
+            <input type="text" id="fname" name="firstname" placeholder=" Username sasa">
+            <input type="text" id="email" name="email" placeholder="Email">
+			
+            <h2>Payment</h2>
+			
+			<label for="cname">Card Holder Name</label>
+			<input type="text" id="cname" name="cardname" placeholder="John More Doe">
+		
+				<label for="ccnum">Card Number</label>
+				<input type="number" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+					
+					<label for="expmonth">Exp Date<label for="cvv">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CVV</label>
+			<br></label>
+					<input type="number" id="expmonth" name="expmonth" placeholder="Month" style="width: 17%" > 
+					<label > / </label>
+					<input type="number" id="expmonth" name="expmonth" placeholder="Year" style="width: 17%" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="password" id="cvv" name="cvv" placeholder="352" style="width: 26%">
+					
+        </div>
+		
+        <a href="Start_Page.html">
+	<button id="submit">proceed payment</button></a>
+    </div>
+
+</body>
+
+</html>

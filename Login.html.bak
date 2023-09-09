@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> login</title>
+
+	
+		<!--Google Font-->
+		<link 
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&dispaly=swap"
+			rel="stylesheet"
+		/>
+		
+		<!--Stylesheet-->
+		<link rel="stylesheet" href="login.css"/>
+		
+	</head>
+	<script>
+function validateForm() {
+  let usrname = document.forms["myForm"]["fname"].value;
+  let pass = document.forms["myForm"]["pass"].value;
+  if (usrname == "")  {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (pass == "")  {
+    alert("Password must be filled out");
+    return false;
+  }
+}
+</script>
+	<body>
+		
+		<div Class="container_login">
+		<h1>Welcome User</h1>
+		<p >Welcom back, Pleace login to your account .... </p>
+
+		<form name="myForm" action="HomePage.html" onsubmit="return validateForm()" method="post">
+				<input type="text" 		placeholder="Username" 		d="username"  type="text" name="fname"/>
+		<input type="Password" 	placeholder="Password" 	id="password"  name="pass"/>
+
+				<button type="submit" value="Submit" id="submit">Submit</button></a>
+
+		</form>
+		<!--
+		<a href="HomePage.html">
+		<button id="submit">Submit</button></a>
+		-->
+		<a href="start_page.html">
+		<button id="back">Go Back</button></a>
+		</div>
+</body>
+</html>
